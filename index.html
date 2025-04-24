@@ -690,88 +690,99 @@
 
 
 <section id="testimonials" class="footer-content fade-in-section">
+  <style>
+    #testimonials {
+      background-color: #f9f9f9;
+      padding: 40px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
 
-<style>
- #testimonials {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    text-align: center;
-}
+    #testimonials h3 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
 
-#testimonials h3 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
+    .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
 
-.testimonials-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
+    .testimonial-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.testimonial-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+    .rating {
+      font-size: 1.5rem;
+      color: #ffbc00;
+      margin-bottom: 15px;
+    }
 
-.rating {
-    font-size: 1.5rem;
-    color: #ffbc00;
-    margin-bottom: 15px;
-}
+    .testimonial-card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
 
-.testimonial-card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
+    .testimonial-card span {
+      font-size: 1.1rem;
+      color: #000;
+      font-weight: bold;
+    }
 
-.testimonial-card span {
-    font-size: 1.1rem;
-    color: #000; /* Alterado para preto */
-    font-weight: bold;
-}
+    .review-link {
+      margin-top: 40px;
+    }
 
+    .review-link a {
+      font-size: 1.2rem;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-.review-link {
-    margin-top: 40px;
-}
+    .review-link a:hover {
+      background-color: #0066cc;
+      color: #fff;
+    }
 
-.review-link a {
-    font-size: 1.2rem;
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+    /* Hide scrollbar for webkit browsers */
+    .carousel-container::-webkit-scrollbar {
+      display: none;
+    }
 
-.review-link a:hover {
-    background-color: #0066cc;
-    color: #fff;
-}
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .carousel-container {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  </style>
 
-</style>
-
-
-
-    <h3>O que nossos clientes dizem</h3>
-    <div class="testimonials-wrapper">
-        <div class="testimonials">
+  <h3>O que nossos clientes dizem</h3>
+  <div class="carousel-container">
             <div class="testimonial-card">
                 <div class="rating">★★★★★</div>
                 <p>"Mano, a Acertos Club é braba! Fiz o cadastro rapidão e já peguei aquele bônus de 30%. É zoeira, recomendo pra caramba!"</p>
@@ -944,6 +955,46 @@
             </div>
         </div>
     </div>
+
+<style>
+    .review-link {
+        text-align: center;
+        margin: 40px auto;
+        padding: 16px 24px;
+        background-color: #1e1e1e; /* fundo escuro */
+        border-radius: 12px;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .review-link a {
+        color: #00ffb2; /* verde neon suave para contraste */
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-block;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .review-link a:hover {
+        color: #00e3a4;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+        .review-link {
+            margin: 24px 16px;
+            padding: 14px 20px;
+        }
+
+        .review-link a {
+            font-size: 14px;
+        }
+    }
+</style>
+
+
+
     <div class="review-link">
         <a href="https://g.page/r/Cd4KjfCG7vFiEBM/review" target="_blank">Comente e deixe a sua avaliação!</a>
     </div>
@@ -951,6 +1002,64 @@
 
 
 
+<style>
+    footer {
+        background-color: #1a1a1a;
+        color: #ccc;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 14px;
+        margin-top: 40px;
+        border-top: 2px solid #333;
+    }
+
+    footer a {
+        color: #00c896;
+        text-decoration: none;
+        margin: 0 8px;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .floating-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #00c896;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        z-index: 999;
+    }
+
+    .floating-btn:hover {
+        background-color: #00a678;
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 600px) {
+        .floating-btn {
+            padding: 12px 20px;
+            font-size: 14px;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        footer {
+            font-size: 12px;
+            padding: 15px 5px;
+        }
+    }
+</style>
 
 
         <footer>

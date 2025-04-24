@@ -2,83 +2,67 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App Acertos</title>
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width, maximum-scale=1" />
+    <title>Online website</title>
 
-    <!-- Fonte primária -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Fontes carregadas de forma assíncrona -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=bevellier@400,500,501,600,601&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
 
-    <!-- Estilos -->
+    <!-- Estilos essenciais inline (evita bloqueio) -->
     <style>
       html, body {
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%;
-        background-color: #000;
-        font-family: 'Inter', sans-serif;
-        color: white;
+        background: #000;
+        overflow: hidden;
+        font-family: 'Open Sans', sans-serif;
       }
-
-      .header {
-        text-align: center;
-        padding: 1rem;
-        font-size: 1.25rem;
-      }
-
-      .preview {
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-
       iframe {
         border: none;
         width: 100vw;
         height: 90vh;
+        min-height: 500px;
+        aspect-ratio: 16 / 9;
         display: block;
-      }
-
-      .noscript-warning {
-        color: red;
-        text-align: center;
-        margin-top: 1rem;
-        font-size: 1rem;
       }
     </style>
 
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (apenas 1 GTM, com defer) -->
+    <script defer src="https://www.googletagmanager.com/gtm.js?id=GTM-KJSBTC5F"></script>
     <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KJSBTC5F');
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
     </script>
-    <!-- End Google Tag Manager -->
   </head>
-
   <body>
-    <div class="header">
-      Bem-vindo ao App Acertos - Seu portal de palpites esportivos!
-    </div>
+    <!-- Conteúdo principal com iframe -->
+    <iframe src="https://app.acertos.club/pr/sbrqjugZ" allowfullscreen loading="lazy"></iframe>
 
-    <div class="preview">
-      <img src="https://via.placeholder.com/300x150?text=Carregando+App..." alt="Preview do App" width="300" height="150" />
-    </div>
-
-    <iframe 
-      src="https://app.acertos.club/pr/sbrqjugZ" 
-      loading="lazy" 
-      allowfullscreen 
-      title="Aplicativo Acertos"
-      aria-label="Aplicativo de Palpites Acertos"
-    ></iframe>
-
+    <!-- GTM noscript -->
     <noscript>
-      <div class="noscript-warning">
-        Por favor, ative o JavaScript para visualizar o aplicativo corretamente.
-      </div>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJSBTC5F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJSBTC5F"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
   </body>
 </html>

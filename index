@@ -2,40 +2,23 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="initial-scale=1, viewport-fit=cover, width=device-width, maximum-scale=1"
-    />
-    <title>Online website</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-    <link href="https://api.fontshare.com/v2/css?f[]=bevellier@400,500,501,600,601&display=swap" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/react-spring-bottom-sheet/dist/style.css"
-      crossorigin="anonymous"
-    />
-
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KJSBTC5F');
-    </script>
-    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Site Espelhado</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
   </head>
-  <body style="margin:0;padding:0;">
-    <iframe src="https://app.acertos.club/pr/sbrqjugZ" width="100%" height="100%" frameborder="0" style="border:0;position:absolute;top:0;left:0;bottom:0;right:0;width:100vw;height:100vh;"></iframe>
-
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJSBTC5F"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <body>
+    <iframe src="https://app.acertos.club/pr/sbrqjugZ" allowfullscreen></iframe>
   </body>
 </html>

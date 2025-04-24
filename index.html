@@ -143,6 +143,7 @@
         text-align: center;
         border-radius: 10px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow-x: hidden; /* evita estouro horizontal */
     }
 
     #advantages h2 {
@@ -152,21 +153,23 @@
         font-weight: bold;
     }
 
-    /* Grid de vantagens */
     .advantages-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 30px;
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
     .advantage-item {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
         border-radius: 15px;
-        padding: 30px;
+        padding: 30px 20px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
         text-align: center;
         transition: transform 0.3s, box-shadow 0.3s;
@@ -174,35 +177,31 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Efeito de hover nas vantagens */
     .advantage-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
-    /* Ícones dentro das vantagens */
     .advantage-item img {
         width: 60px;
-        height: 60px;
+        height: auto;
+        max-width: 100%;
         margin-bottom: 20px;
     }
 
-    /* Títulos das vantagens */
     .advantage-item h3 {
-        font-size: 1.5em;
+        font-size: 1.4em;
         color: #ffd700;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         font-weight: bold;
     }
 
-    /* Descrição das vantagens */
     .advantage-item p {
         font-size: 1em;
-        color: #fff;
+        color: #eee;
         line-height: 1.5;
     }
 
-    /* Efeito de fade-in para a seção */
     .fade-in-section {
         opacity: 0;
         animation: fadeIn 1s forwards;
@@ -214,23 +213,29 @@
         }
     }
 
-    /* Responsividade */
-    @media (max-width: 1024px) {
-        .advantages-grid {
-            grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 480px) {
+        #advantages {
+            padding: 40px 10px;
         }
-    }
 
-    @media (max-width: 768px) {
-        .advantages-grid {
-            grid-template-columns: 1fr;
+        .advantage-item {
+            padding: 20px;
         }
 
         #advantages h2 {
-            font-size: 2em;
+            font-size: 1.8em;
+        }
+
+        .advantage-item h3 {
+            font-size: 1.2em;
+        }
+
+        .advantage-item img {
+            width: 50px;
         }
     }
 </style>
+
 
 
 
@@ -1067,7 +1072,7 @@
         </footer>
     </div>
 
-    <a href="https://app.acertosonline.com/" class="floating-btn" target="_blank">Cadastre-se Agora</a>
+   
 
     <script defer src="scripts.js"></script>
 
